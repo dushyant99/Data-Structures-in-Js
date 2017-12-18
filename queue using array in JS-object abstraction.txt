@@ -1,0 +1,58 @@
+function add(v)
+{
+  if(this.rear==4)
+  console.log("Queue full");
+  else {
+    if(this.front==-1)
+    this.front++;
+
+    this.rear++;
+    this.qu[this.rear]=v;
+  }
+}
+
+function del()
+{
+  if(this.front==-1 || this.front>this.rear)
+  console.log("array empty, nothing to print");
+  else {
+    console.log("the deleted value is: "+this.qu[this.front]);
+    this.qu[this.front]=0;
+    this.front=this.front+1;
+    }
+}
+
+function print()
+{
+  if(this.front==-1 || this.front>this.rear)
+  console.log("array empty, nothing to print");
+else{
+  console.log("printing Queue");
+  for(var i=this.front;i<=this.rear;i++)
+   console.log(this.qu[i]);
+ }
+}
+
+
+
+
+var q1={
+  front:-1,
+  rear:-1,
+  qu:new Array(5),
+  add:add,
+  del:del,
+  print:print
+};
+
+q1.del();
+q1.print();
+q1.add(10);
+q1.add(20);
+q1.add(30);
+q1.add(40);
+q1.add(50);
+q1.add(60);
+q1.print();
+q1.del();
+q1.print();

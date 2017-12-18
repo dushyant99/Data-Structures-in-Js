@@ -1,0 +1,94 @@
+var qu1=new Array(10);
+var front1=-1;
+var rear1=-1;
+
+console.log(typeof(front1));
+
+function add1(v)
+{
+if(rear1==9)
+console.log("queue full");
+else {
+  if(front1==-1)
+  front1++;
+
+  rear1++;
+  qu1[rear1]=v;
+}
+}
+
+function del1()
+{
+  if(front1==-1 || front1>rear1)
+  console.log("queue empty");
+  else {
+    console.log("The value getting deleted from queue is: "+qu1[front1]);
+    qu1[front1]=0;
+    front1++;
+  }
+
+}
+
+function print1()
+{
+  console.log("printing queue");
+  for(var i=front1;i<=rear1;i++)
+  {
+    console.log(qu1[i]);
+  }
+}
+
+add1(10);
+add1(20);
+add1(30);
+add1(40);
+print1();
+del1();
+print1();
+
+
+var qu2=new Array(10);
+var front2=-1;
+var rear2=-1;
+
+function add2(v)
+{
+if(rear2==9)
+console.log("queue full");
+else {
+  if(front2==-1)
+  front2++;
+
+  rear2++;
+  qu2[rear2]=v;
+}
+}
+
+function del2()
+{
+  if(front2==-1 || front2>rear2)
+  console.log("queue empty");
+  else {
+    console.log("The value getting deleted from queue is: "+qu2[front2]);
+    qu2[front2]=0;
+    front2++;
+  }
+
+}
+
+function print2()
+{
+  console.log("printing queue");
+  for(var i=front2;i<=rear2;i++)
+  {
+    console.log(qu2[i]);
+  }
+}
+
+add2(60);
+add2(70);
+add2(80);
+add2(90);
+print2();
+del2();
+print2();
